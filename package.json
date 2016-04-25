@@ -52,6 +52,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "js-yaml": "^3.6.0"
+    "js-yaml": "^3.6.0",
+    "optimist": "^0.6.1"
   }
 }

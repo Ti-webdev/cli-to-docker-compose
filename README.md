@@ -1,3 +1,6 @@
+### Important!
+Implemented some docker options only.
+
 # cli-to-docker-compose [![Build Status](http://img.shields.io/travis/Ti-webdev/cli-to-docker-compose.svg?style=flat)](http://travis-ci.org/Ti-webdev/cli-to-docker-compose) [![Code Coverage](http://img.shields.io/coveralls/Ti-webdev/cli-to-docker-compose.svg?style=flat)](https://coveralls.io/r/Ti-webdev/cli-to-docker-compose) [![NPM version](http://img.shields.io/npm/v/cli-to-docker-compose.svg?style=flat)](https://www.npmjs.org/package/cli-to-docker-compose) [![Dependency Status](http://img.shields.io/david/Ti-webdev/cli-to-docker-compose.svg?style=flat)](https://david-dm.org/Ti-webdev/cli-to-docker-compose)
 
 > Conver docker cli to docker-compose.yml format
@@ -9,6 +12,12 @@ Install using [npm](https://www.npmjs.org/):
 
 ```sh
 npm install cli-to-docker-compose
+```
+
+## Usage
+for example:
+```bash
+cli-to-docker-compose docker run -d --cap-add SYS_PTRACE --name netdata -v /proc:/host/proc:ro -v /sys:/host/sys:ro -p 19999:19999 titpetric/netda
 ```
 
 ## Contributing
