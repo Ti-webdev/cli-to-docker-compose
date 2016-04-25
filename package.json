@@ -1,0 +1,58 @@
+{
+  "name": "cli-to-docker-compose",
+  "description": "Conver docker cli to docker-compose.yml format",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Ti-webdev/cli-to-docker-compose",
+  "author": {
+    "name": "Ti",
+    "email": "cli-to-docker-compose@3apaxi.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ti-webdev/cli-to-docker-compose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ti-webdev/cli-to-docker-compose/issues"
+  },
+  "licenses": [
+    {
+      "type": "Open Works License (OWL)",
+      "url": "https://github.com/Ti-webdev/cli-to-docker-compose/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/cli-to-docker-compose.js",
+  "bin": {
+    "cli-to-docker-compose": "bin/cli-to-docker-compose.js"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">=1.4.3"
+  },
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js test"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "gulp-mocha": "^1.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "mocha-lcov-reporter": "0.0.1",
+    "gulp-coveralls": "^0.1.3",
+    "jsdoc-to-markdown": "^0.5.7",
+    "gulp": "^3.8.7",
+    "gulp-clean": "^0.3.1",
+    "gulp-help": "^1.3.1",
+    "gulp-jshint": "^1.8.4",
+    "gulp-jscs": "^1.3.1",
+    "gulp-instrument": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0",
+    "jshint-stylish": "^1.0.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "js-yaml": "^3.6.0"
+  }
+}

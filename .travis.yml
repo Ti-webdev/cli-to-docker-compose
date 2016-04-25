@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - 4.0.0
+  - 4.4.3
+  - 5.11.0
+after_script:
+- "./node_modules/gulp/bin/gulp.js coveralls"
