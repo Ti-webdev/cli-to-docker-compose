@@ -5,14 +5,14 @@
 
 'use strict';
 
-var expect = require('chai').expect;
-var lib = process.env.JSCOV ? require('../lib-cov/cli-to-docker-compose') : require('../lib/cli-to-docker-compose');
+let expect = require('chai').expect;
+let CliToDockerCompose = require('../lib/cli-to-docker-compose');
 
 describe('cli-to-docker-compose module', function () {
-  it('exports object', function () {
-    expect(lib).to.be.an('object');
+  it('exports class', function () {
+    expect(CliToDockerCompose).to.be.an('function');
   });
   it('result is string', function () {
-    expect(lib.toString).to.be.an('object');
+    expect(new CliToDockerCompose().toString()).to.be.an('string');
   });
 });
