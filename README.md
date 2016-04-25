@@ -11,7 +11,7 @@ Implemented some docker options only.
 Install using [npm](https://www.npmjs.org/):
 
 ```sh
-npm install cli-to-docker-compose
+npm install -g cli-to-docker-compose
 ```
 
 ## Usage
