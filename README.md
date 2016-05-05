@@ -20,6 +20,19 @@ for example:
 cli-to-docker-compose docker run -d --cap-add SYS_PTRACE --name netdata -v /proc:/host/proc:ro -v /sys:/host/sys:ro -p 19999:19999 titpetric/netda
 ```
 
+output:
+```yml
+netdata:
+  image: titpetric/netda
+  cap_add:
+    - SYS_PTRACE
+  volumes:
+    - '/proc:/host/proc:ro'
+    - '/sys:/host/sys:ro'
+  ports:
+    - '19999:19999'
+```
+
 ## Contributing
 
 Please submit all issues and pull requests to the [Ti-webdev/cli-to-docker-compose](http://github.com/Ti-webdev/cli-to-docker-compose) repository!
