@@ -54,4 +54,9 @@ describe('cli-to-docker-compose module', function () {
     expectYml('docker run -t my').to.be.eql({my: {image: 'my', tty: true}});
     expectYml('docker run --tty=true my').to.be.eql({my: {image: 'my', tty: true}});
   });
+  it('-i, --interactive=false', function () {
+    expectYml('docker run -ti my').to.be.eql({my: {image: 'my', tty: true}});
+    expectYml('docker run --interactive=true my').to.be.eql({my: {image: 'my'}});
+    expectYml('docker run --interactive=false my').to.be.eql({my: {image: 'my'}});
+  });
 });
