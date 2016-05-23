@@ -59,4 +59,8 @@ describe('cli-to-docker-compose module', function () {
     expectYml('docker run --interactive=true my').to.be.eql({my: {image: 'my'}});
     expectYml('docker run --interactive=false my').to.be.eql({my: {image: 'my'}});
   });
+  it('-e, --env=[]', function () {
+    expectYml('docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres').to.be.eql({'some-postgres': {image: 'postgres', environment: {POSTGRES_PASSWORD: 'mysecretpassword'}}});
+    expectStr('docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres').to.be.equal('some-postgres:\n  image: postgres\n  environment:\n    POSTGRES_PASSWORD: mysecretpassword\n');
+  });
 });
