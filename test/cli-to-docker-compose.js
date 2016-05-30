@@ -46,6 +46,10 @@ describe('cli-to-docker-compose module', function () {
   it('-p, --publish=[] ', function () {
     expectYml('docker run -p 19999:19999 my').to.be.eql({my: {image: 'my', ports: ['19999:19999']}});
   });
+  it('-P, --publish-all ', function () {
+    expectYml('docker run -P my').to.be.eql({my: {image: 'my'}});
+    expectYml('docker run --publish-all my').to.be.eql({my: {image: 'my'}});
+  });
   it('-d, --detach ', function () {
     expectYml('docker run -d my').to.be.eql({my: {image: 'my'}});
     expectYml('docker run --detach my').to.be.eql({my: {image: 'my'}});
