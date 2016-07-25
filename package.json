@@ -1,7 +1,7 @@
 {
   "name": "cli-to-docker-compose",
   "description": "Conver docker cli to docker-compose.yml format",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "homepage": "https://github.com/Ti-webdev/cli-to-docker-compose",
   "author": {
     "name": "Ti",
@@ -53,7 +53,10 @@
   },
   "keywords": [],
   "dependencies": {
-    "js-yaml": "^3.6.0",
-    "optimist": "^0.6.1"
+    "gulp-jshint": "^2.0.1",
+    "js-yaml": "^3.6.1",
+    "jshint-stylish": "^2.2.0",
+    "optimist": "^0.6.1",
+    "string-argv": "0.0.2"
   }
 }
