@@ -97,7 +97,10 @@ describe('cli-to-docker-compose module', function () {
     expectYml('docker run --expose 80 my').to.be.eql({my: {image: 'my', expose: [80]}});
       expectYml('docker run --expose 80 --expose 8080 my').to.be.eql({my: {image: 'my', expose: [80, 8080]}});
   });
-  it('-p, --publish=[] ', function () {
+  it('-p, --publish=[]', function () {
     expectYml('docker run -p 19999:19999 my').to.be.eql({my: {image: 'my', ports: ['19999:19999']}});
+  });
+  it('-w, --workdir string', function () {
+    expectYml('docker run -w /src my').to.be.eql({my: {image: 'my', working_dir: '/src'}});
   });
 });
